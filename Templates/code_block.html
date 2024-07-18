@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.3.2/socket.io.min.js"></script>
+</head>
+<body>
+    <h1>{{ title }}</h1>
+    <p>User Role: {{ user_role }}</p>
+    <pre><code id="code" class="javascript" contenteditable="{{ 'true' if user_role == 'student' else 'false' }}">{{ code }}</code></pre>
+    <a href="/">Back to Home</a>
+    <script>
+        // Highlight the code block
+        hljs.highlightElement(document.getElementById('code'));
+    </script>
+    <script src="/static/code_block.js"></script> <!-- Include your code_block.js -->
+</body>
+</html>
