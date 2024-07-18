@@ -63,5 +63,5 @@ def handle_update_code(updated_code):
     emit('code_update', updated_code, broadcast=True)  # Send updated code to all clients
 
 if __name__ == "__main__":
-    socketio.run(app, debug=True, allow_unsafe_werkzeug=True)
+    socketio.run(app, debug=True)
     app.run(host='0.0.0.0', port=5000)
