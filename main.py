@@ -26,7 +26,7 @@ code_blocks = {
     }
 }
 
-# Track the first user for each code block
+#  sTrack the first user for each code block
 mentors = {}
 
 #@app.route("/")
