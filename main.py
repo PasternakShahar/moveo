@@ -29,9 +29,13 @@ code_blocks = {
 # Track the first user for each code block
 mentors = {}
 
+#@app.route("/")
+#def index():s
+#    return render_template("index.html")
+
 @app.route("/")
-def index():
-    return render_template("index.html")
+def home():
+    return render_template('index.html')
 
 @app.route('/code/<block_name>')
 def code_block(block_name):
